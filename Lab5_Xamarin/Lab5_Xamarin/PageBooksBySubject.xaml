@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab5_Xamarin.PageBooksBySubject">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="LstBook"
+                      RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding Hinh_minh_hoa}"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="2"></Image>
+                                <Label Text="{Binding Ten_sach}"
+                                       Grid.Row="0"
+                                       Grid.Column="1"></Label>
+                                <Label Text="{Binding Don_gia}"
+                                       Grid.Row="1"
+                                       Grid.Column="1"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

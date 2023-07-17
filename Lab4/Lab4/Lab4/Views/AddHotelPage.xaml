@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab4.Views.AddHotelPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.png"
+                   HeightRequest="100"></Image>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Tên KS: "
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       FontSize="20"
+                       VerticalOptions="Center"></Label>
+                <Entry Keyboard="Text"
+                       x:Name="EntHotelName"
+                       VerticalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="1"></Entry>
+                <Label Text="Hình KS:"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       FontSize="20"
+                       VerticalOptions="Center"></Label>
+                <Entry Keyboard="Text"
+                       x:Name="EntHotelImg"
+                       VerticalOptions="Center"
+                       Grid.Row="1"
+                       Grid.Column="1"></Entry>
+                <Label Text="Thành phố:"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       FontSize="20"
+                       VerticalOptions="Center"></Label>
+                <Picker x:Name="picker"
+                        Title="Chọn Thành phố"
+                        ItemsSource="{Binding CityName}"
+                        ItemDisplayBinding="{Binding CityName}"
+                        Grid.Row="2"
+                        Grid.Column="1"></Picker>
+                <Button Text="LƯU"
+                        x:Name="BtnAddNewHotel"
+                        Clicked="BtnAddNewHotel_Clicked"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        FontAttributes="Bold"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

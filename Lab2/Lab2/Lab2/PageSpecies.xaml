@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.PageSpecies">
+    <ContentPage.Content>
+        <ListView x:Name="LstSpecies"
+                  RowHeight="160"
+                  ItemTapped="LstSpecies_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="4"></Image>
+                            <Label Text="Tên Việt Nam"
+                                   FontAttributes="Bold"
+                                   FontSize="15"
+                                   TextColor="Green"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   VerticalOptions="Start"></Label>
+                            <Label Text="Tên Latin"
+                                   FontAttributes="Bold"
+                                   FontSize="13"
+                                   Grid.Column="1"
+                                   Grid.Row="1"
+                                   TextColor="DarkRed"
+                                   VerticalOptions="End"></Label>
+                            <Label Text="Họ"
+                                   FontAttributes="Bold"
+                                   FontSize="13"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                   TextColor="Blue"
+                                   VerticalOptions="Center"></Label>
+                            <Label Text="Bộ"
+                                   FontAttributes="Bold"
+                                   FontSize="13"
+                                   Grid.Column="1"
+                                   Grid.Row="3"
+                                   TextColor="Red"
+                                   VerticalOptions="Start"></Label>
+                            <Label Text="{Binding VNname}"
+                                   FontAttributes="Bold"
+                                   FontSize="15"
+                                   Grid.Column="2"
+                                   Grid.Row="0"
+                                   TextColor="Green"
+                                   TextTransform="Uppercase"
+                                   VerticalOptions="Start"></Label>
+                            <Label Text="{Binding LTname}"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   Grid.Column="2"
+                                   Grid.Row="1"
+                                   TextColor="DarkRed"
+                                   VerticalOptions="End"></Label>
+                            <Label Text="{Binding ho}"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   Grid.Column="2"
+                                   Grid.Row="2"
+                                   TextColor="blue"
+                                   VerticalOptions="Center"></Label>
+                            <Label Text="{Binding bo}"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   Grid.Column="2"
+                                   Grid.Row="3"
+                                   TextColor="Red"
+                                   VerticalOptions="Start"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

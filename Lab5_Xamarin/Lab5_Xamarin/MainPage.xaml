@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab5_Xamarin.MainPage"
+             Title="App test web API">
+
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!"
+               x:Name="LblHello"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"></Label>
+        <Button x:Name="CmdHelloWebAPI"
+                Text="1. Chào Web API"
+                FontSize="20"
+                Clicked="CmdHelloWebAPI_Clicked"></Button>
+        <Button x:Name="CmdSubjectList"
+                Text="2. Danh sách chủ đề"
+                FontSize="20"
+                Clicked="CmdSubjectList_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

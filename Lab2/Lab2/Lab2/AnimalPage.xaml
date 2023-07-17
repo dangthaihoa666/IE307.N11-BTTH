@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.AnimalPage"
+             Title="Thế giới động vật">
+    <ContentPage.Content>
+        <ListView x:Name="listAnimal"
+                  RowHeight="120"
+                  ItemTapped="listAnimal_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding AnimalImage}"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="2"></Image>
+                            <Label Text="{Binding AnimalName}"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"></Label>
+                            <Label Text="{Binding AnimalAge}"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   FontSize="Large"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

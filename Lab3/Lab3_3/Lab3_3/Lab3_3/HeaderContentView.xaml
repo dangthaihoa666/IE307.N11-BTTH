@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ImgCir="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="Lab3_3.HeaderContentView"
+             HeightRequest="170">
+    <ContentView.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+
+            <Image Aspect="AspectFit"
+                   Source="UITLogo.webp"
+                   BackgroundColor="AliceBlue"
+                   Grid.ColumnSpan="5"
+                   Grid.RowSpan="4"
+                   Opacity="0.5"></Image>
+            <ImgCir:CircleImage Source="PNDuy.jpg"
+                                Aspect="AspectFill"
+                                Margin="0"
+                                Grid.Column="1"
+                                Grid.Row="1"></ImgCir:CircleImage>
+
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         Grid.ColumnSpan="3"
+                         Margin="10,0,0,0"
+                         Orientation="Vertical">
+                <Label HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       TextColor="Black"
+                       Text="369"
+                       FontAttributes="Bold"></Label>
+                <Label HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       TextColor="Black"
+                       Text="369@gmail.com"
+                       FontAttributes="Bold"></Label>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

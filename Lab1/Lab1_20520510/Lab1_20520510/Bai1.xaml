@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1_20520510.Bai1">
+    <ContentPage.Content>
+        <StackLayout Margin="20"
+                     Spacing="50">
+            <Label Text="Lorem Ipsum"
+                   TextColor="Black"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   BackgroundColor="Aqua"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   HeightRequest="100"></Label>
+            <StackLayout Orientation="Horizontal"
+                         BackgroundColor="LightGray"
+                         HeightRequest="150">
+                <Image Source="https://tuoitre.uit.edu.vn/wp-content/uploads/2015/07/logo-uit.png"
+                       HeightRequest="80"
+                       VerticalOptions="Center"
+                       Margin="10,0,0,0"></Image>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                       FontSize="Body"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="DarkBlue"
+                       BackgroundColor="White"></Label>
+                <CheckBox IsChecked="True"></CheckBox>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="End"
+                         HeightRequest="100"
+                         BackgroundColor="Yellow">
+                <Label Text="Lorem"
+                       FontSize="Body"
+                       FontAttributes="Bold"
+                       TextColor="DarkRed"></Label>
+                <Label Text="Lorem Ipsum Dolor"
+                       FontSize="Body"
+                       TextColor="DarkGreen"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"></Label>
+                <Label Text="Lorem Ipsum"
+                       FontSize="Body"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       VerticalOptions="End"></Label>
+            </StackLayout>
+            <BoxView HeightRequest="50"
+                     BackgroundColor="DarkOrange"
+                     HorizontalOptions="Start"
+                     WidthRequest="100"
+                     VerticalOptions="EndAndExpand"></BoxView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

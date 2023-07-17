@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3_3.LaptopVPPage"
+             Title="LAPTOP">
+    <CollectionView x:Name="listLapVP"
+                    ItemsLayout="VerticalGrid, 2">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10"
+                      HeightRequest="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Source="{Binding Image}"
+                           Aspect="AspectFit"
+                           HeightRequest="80"
+                           WidthRequest="80" />
+                    <StackLayout Grid.Row="1">
+                        <Label  Text="{Binding Name}"
+                                FontSize="18"
+                                TextColor="Black" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Star}"
+                                   FontSize="18"
+                                   TextColor="Black" />
+                            <Image Source="star.png"
+                                   VerticalOptions="Center"
+                                   Aspect="AspectFill"
+                                   HeightRequest="20"
+                                   WidthRequest="20"></Image>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Cost, StringFormat='{0:0,0 vnđ}'}"
+                                   FontSize="18"
+                                   TextColor="Black"></Label>
+                            <Image Source="FavouriteBlackIcon.png"
+                                   VerticalOptions="Center"
+                                   Aspect="AspectFill"
+                                   HeightRequest="20"
+                                   WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="ImgAddToWishlist"
+                                                          Tapped="ImgAddToWishlist_Tapped"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="AddToCartIcon.png"
+                                   VerticalOptions="Center"
+                                   Aspect="Fill"
+                                   HeightRequest="20"
+                                   WidthRequest="20"></Image>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

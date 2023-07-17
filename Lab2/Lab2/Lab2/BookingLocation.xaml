@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.BookingLocation"
+             Title="Booking">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="./logo.png" WidthRequest="100" HeightRequest="100"></Image>
+            <ListView x:Name="listlocation"
+                      RowHeight="100"
+                      ItemTapped="listlocation_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding LocationImage}"
+                                       Grid.Row="0"
+                                       Grid.Column="0"></Image>
+                                <Label Text="{Binding LocationName}"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                       FontSize="Large"
+                                       VerticalOptions="Center"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

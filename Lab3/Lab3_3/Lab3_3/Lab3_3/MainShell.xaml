@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:Lab3_3"
+       x:Class="Lab3_3.MainShell">
+    
+    <Shell.FlyoutHeader>
+        <pages:HeaderContentView></pages:HeaderContentView>
+    </Shell.FlyoutHeader>
+
+    <TabBar Title="MyApp" >
+        <Tab Icon="HomeIcon.png"
+             Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+        </Tab>
+        <Tab Icon="LaptopIcon.png"
+             Title="Laptop">
+            <ShellContent ContentTemplate="{DataTemplate pages:LaptopGamingPage}" Title="Gaming" />
+            <ShellContent ContentTemplate="{DataTemplate pages:LaptopVPPage}" Title="Văn Phòng"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:LaptopMacPage}" Title="Macbook"/>
+        </Tab>
+        <Tab Icon="SmartphoneIcon.png"
+             Title="Smartphone">
+            <ShellContent ContentTemplate="{DataTemplate pages:PhoneGamingPage}" Title="Gaming"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:PhoneCAQPPage}" Title="Chụp ảnh, quay phim" />
+            <ShellContent ContentTemplate="{DataTemplate pages:PhoneIPhonePage}" Title="Iphone"/>
+        </Tab>
+        <Tab Icon="AccessoriesIcon.png"
+             Title="Accessories">
+             <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+        </Tab>
+        <Tab Icon="AccessoriesIcon.png"
+             Title="Accessories 2">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+        </Tab>
+        <Tab Icon="AccessoriesIcon.png"
+             Title="Accessories 3">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+        </Tab>
+        <Tab Icon="AboutIcon.png"
+             Title="About">
+            <ShellContent ContentTemplate="{DataTemplate pages:About}" />
+        </Tab>
+        
+    </TabBar>
+
+    <ShellContent Title="About"
+                  Icon="AboutIcon.png"
+                  ContentTemplate="{DataTemplate pages:About}" />
+
+    <MenuItem Text="Help"
+              IconImageSource="HelpIcon.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://learn.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/"></MenuItem>
+</Shell>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab4.MainPage">
+
+    <StackLayout>
+        <Label Text="LAB 4"
+               FontSize="50"
+               FontAttributes="Bold"
+               TextColor="DeepSkyBlue"
+               VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"></Label>
+        <Button Text="Bài 4.1. CRUD với SQLite"
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai1"
+                Clicked="bai1_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

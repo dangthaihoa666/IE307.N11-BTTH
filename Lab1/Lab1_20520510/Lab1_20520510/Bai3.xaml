@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1_20520510.Bai3">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+            <Label Text="Basic Controls"
+                   FontSize="40"
+                   TextColor="Gray"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"></Label>
+            <Entry Placeholder="Name"
+                   Keyboard="Text"
+                   FontSize="20"
+                   Grid.Row="1"></Entry>
+            <Entry Placeholder="Email"
+                   Keyboard="Email"
+                   FontSize="20"
+                   Grid.Row="2"></Entry>
+            <Entry Placeholder="Phone Number"
+                   Keyboard="Telephone"
+                   MaxLength="10"
+                   FontSize="20"
+                   Grid.Row="3"></Entry>
+            <Entry Placeholder="Password"
+                   Keyboard="Text"
+                   FontSize="20"
+                   Grid.Row="4"></Entry>
+            <Editor BackgroundColor="Black"
+                    Grid.Row="5"></Editor>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

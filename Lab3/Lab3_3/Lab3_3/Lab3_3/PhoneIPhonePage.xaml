@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3_3.PhoneIPhonePage"
+             Title="SMARTPHONE">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <RefreshView x:Name="RVIPhone" Refreshing="RVIPhone_Refreshing" >
+                <CollectionView x:Name="listIphone" SelectionMode="Multiple">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                         Span="1"
+                                         VerticalItemSpacing="5"></GridItemsLayout>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView WidthRequest="200">
+                                <SwipeView.RightItems>
+                                    <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                                        <SwipeItem Text="Delete"
+                                                   IconImageSource="DeleteIcon.png"
+                                                   BackgroundColor="Red"
+                                                   CommandParameter="{Binding .}"
+                                                   Invoked="OnDeleteSwipeItemIvoked"></SwipeItem>
+                                        <SwipeItem Text="Buy now"
+                                                   IconImageSource="BuyIcon.png"
+                                                   BackgroundColor="LightGreen"
+                                                   CommandParameter="{Binding .}"
+                                                   Invoked="OnBuySwipeItemInvoked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0"
+                                           Source="{Binding Image}"
+                                           Aspect="AspectFit"
+                                           HeightRequest="80"
+                                           WidthRequest="80" />
+                                    <StackLayout Grid.Column="1">
+                                        <Label  Text="{Binding Name}"
+                                                FontSize="18"
+                                                TextColor="Black" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Star}"
+                                                   FontSize="18"
+                                                   TextColor="Black" />
+                                            <Image Source="star.png"
+                                                   VerticalOptions="Center"
+                                                   Aspect="AspectFill"
+                                                   HeightRequest="20"
+                                                   WidthRequest="20"></Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Cost, StringFormat='{0:0,0 vnđ}'}"
+                                                   FontSize="18"
+                                                   TextColor="Black"></Label>
+                                            <Image Source="FavouriteBlackIcon.png"
+                                                   VerticalOptions="Center"
+                                                   Aspect="AspectFill"
+                                                   HeightRequest="20"
+                                                   WidthRequest="20">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer x:Name="ImgAddToWishlist"
+                                                                          Tapped="ImgAddToWishlist_Tapped"></TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image Source="AddToCartIcon.png"
+                                                   VerticalOptions="Center"
+                                                   Aspect="Fill"
+                                                   HeightRequest="20"
+                                                   WidthRequest="20"></Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

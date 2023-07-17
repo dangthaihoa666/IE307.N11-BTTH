@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1_20520510.MainPage">
+    <StackLayout>
+        <Label Text="MEMU LAB 1"
+               FontSize="50"
+               FontAttributes="Bold"
+               TextColor="Red"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               HeightRequest="120"
+               WidthRequest="500"></Label>
+        <Button Text="Bài 1.1. StackLayout"
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai1"
+                Clicked="bai1_Clicked"></Button>
+        <Button Text="Bài 1.2. GridLayout 1"                
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai2_1"
+                Clicked="bai2_1_Clicked"></Button>
+        <Button Text="Bài 1.2. GridLayout 2"             
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai2_2"
+                Clicked="bai2_2_Clicked"></Button>
+        <Button Text="Bài 1.3. Các điều khiển cơ bản"                
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai3"
+                Clicked="bai3_Clicked"></Button>
+        <Button Text="Bài 1.4. Xử lý sự kiện trên các điều khiển"                
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="bai4"
+                Clicked="bai4_Clicked"></Button>
+        <Button Text="Calculator"               
+                WidthRequest="500"
+                HeightRequest="70"
+                x:Name="calculator"
+                Clicked="calculator_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

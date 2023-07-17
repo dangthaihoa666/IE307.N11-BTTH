@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3.PageCountryCity"
+             Title="Picker (Country)">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="countrypicker"
+                    Title="Chọn một đất nước"
+                    TitleColor="Blue"
+                    FontSize="25"
+                    SelectedIndexChanged="countrypicker_SelectedIndexChanged"
+                    ItemDisplayBinding="{Binding CountryName}">
+            </Picker>
+            <ListView x:Name="listCity"
+                      RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding CityImage}"
+                                       Aspect="AspectFill"
+                                       Grid.Column="0"></Image>
+                                <Label Text="{Binding CityName}"
+                                       FontAttributes="Bold"
+                                       FontSize="20"
+                                       TextColor="HotPink"
+                                       Grid.Column="1"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
